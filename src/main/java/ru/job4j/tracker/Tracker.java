@@ -27,7 +27,7 @@ public class Tracker {
                 count++;
             }
         }
-        newItem = Arrays.copyOf(newItem,count);
+        newItem = Arrays.copyOf(newItem, count);
         return newItem;
     }
 
