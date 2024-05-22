@@ -25,7 +25,7 @@ public class StartUI {
                 }
             } else if (select == 2) {
                 System.out.println("=== Edit item ===");
-                int id = input.askInt( "Enter id: ");
+                int id = input.askInt("Enter id: ");
                 String name = input.askStr("Enter name: ");
                 Item item = new Item(name);
                 if (tracker.replace(id, item)) {
@@ -35,7 +35,7 @@ public class StartUI {
                 }
             } else if (select == 3) {
             System.out.println("=== Удаление заявки ===");
-            int id = input.askInt( "Enter id: ");
+            int id = input.askInt("Enter id: ");
             Item item = tracker.findById(id);
             tracker.delete(id);
             System.out.println(item != null ? "Заявка удалена успешно." : "Ошибка удаления заявки.");
