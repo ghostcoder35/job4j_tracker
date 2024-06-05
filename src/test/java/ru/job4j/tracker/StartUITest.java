@@ -131,9 +131,9 @@ class StartUITest {
     void whenFindByNameActionTestOutputIsSuccessfully() {
         Output output = new StubOutput();
         Tracker tracker = new Tracker();
-        Item one = tracker.add(new Item("test1"));
+        Item item = tracker.add(new Item("test1"));
         Input input = new MockInput(
-                new String[] {"0", String.valueOf(one.getName()), "1"}
+                new String[] {"0", String.valueOf(item.getName()), "1"}
         );
         UserAction[] actions = new UserAction[]{
                 new FindByNameAction(output),
@@ -146,7 +146,7 @@ class StartUITest {
                         + "0. Показать заявки по имени" + ln
                         + "1. Завершить программу" + ln
                         + "=== Вывод заявок по имени ===" + ln
-                        + one + ln
+                        + item + ln
                         + "Меню:" + ln
                         + "0. Показать заявки по имени" + ln
                         + "1. Завершить программу" + ln
