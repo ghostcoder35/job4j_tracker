@@ -22,10 +22,9 @@ class StartUITest {
     }
 
     @Test
-    void whenFindAllActionTestOutputIsSuccessfully() {
+    void whenFindAllTestOutputIsNotSuccessfully() {
         Output output = new StubOutput();
         Tracker tracker = new Tracker();
-        Item one = tracker.add(new Item("test1"));
         Input input = new MockInput(
                 new String[] {"0", "1"}
         );
@@ -40,7 +39,7 @@ class StartUITest {
                         + "0. Показать все заявки" + ln
                         + "1. Завершить программу" + ln
                         + "=== Вывод всех заявок ===" + ln
-                        + one + ln
+                        + "Хранилище ещё не содержит заявок" + ln
                         + "Меню:" + ln
                         + "0. Показать все заявки" + ln
                         + "1. Завершить программу" + ln
@@ -104,7 +103,7 @@ class StartUITest {
     }
 
     @Test
-    void whenFindByIdActionTestOutputIsSuccessfully() {
+    void whenFindByIdTestOutputIsSuccessfully() {
         Output output = new StubOutput();
         Tracker tracker = new Tracker();
         Item one = tracker.add(new Item("test1"));
@@ -131,7 +130,7 @@ class StartUITest {
     }
 
     @Test
-    void whenFindByNameActionTestOutputIsSuccessfully() {
+    void whenFindByNameTestOutputIsSuccessfully() {
         Output output = new StubOutput();
         Tracker tracker = new Tracker();
         Item one = tracker.add(new Item("test1"));
