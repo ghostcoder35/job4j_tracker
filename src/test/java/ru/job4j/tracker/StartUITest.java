@@ -26,9 +26,10 @@ class StartUITest {
     }
 
     @Test
-    void whenFindAllTestOutputIsNotSuccessfully() {
+    void whenFindAllTestOutputIsSuccessfully() {
         Output output = new StubOutput();
         Tracker tracker = new Tracker();
+        Item one = tracker.add(new Item("test1"));
         Input input = new MockInput(
                 new String[] {"0", "1"}
         );
@@ -43,7 +44,7 @@ class StartUITest {
                         + "0. Показать все заявки" + ln
                         + "1. Завершить программу" + ln
                         + "=== Вывод всех заявок ===" + ln
-                        + "Хранилище ещё не содержит заявок" + ln
+                        + one + ln
                         + "Меню:" + ln
                         + "0. Показать все заявки" + ln
                         + "1. Завершить программу" + ln
