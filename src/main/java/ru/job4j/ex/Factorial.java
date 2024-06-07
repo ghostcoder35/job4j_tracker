@@ -13,7 +13,7 @@ public class Factorial {
     }
 
     public static void main(String[] args) {
-        int result = new Factorial().calc(5);
+        int result = new Factorial().calc(6);
         System.out.println(result);
     }
 }
