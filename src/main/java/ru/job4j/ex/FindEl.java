@@ -17,7 +17,7 @@ public class FindEl {
 
     public static void main(String[] args) {
         try {
-            int result = indexOf(new String[]{"Python", "Java", "C++"},"Java");
+            int result = indexOf(new String[]{"Python", "Java", "C++"}, "Java");
             System.out.println(result);
         } catch (ElementNotFoundException e) {
             e.printStackTrace();
