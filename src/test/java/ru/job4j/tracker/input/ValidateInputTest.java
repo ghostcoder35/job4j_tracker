@@ -34,7 +34,7 @@ class ValidateInputTest {
     void whenPolyValidInput() {
         Output output = new StubOutput();
         Input in = new MockInput(
-                new String[] {"1","2","3"}
+                new String[] {"1", "2", "3"}
         );
         ValidateInput input = new ValidateInput(output, in);
         int selected = input.askInt("Enter menu:");
